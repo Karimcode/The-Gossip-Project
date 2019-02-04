@@ -7,10 +7,7 @@
     <%= potin.title%></br>
     Son auteur:
     <%= User.find_by(id: potin.user_id).first_name%> </br>
-=begin
-PROBLEME DE PATH
-    <%=link_to "Voir plus", gossips_path(@gossip.id)%>
-#FIN PROBLEME
-=end
+    
+    <%=link_to "Voir plus", my_gossip_path(@gossip.id)%>
   </p>
 <%end%>

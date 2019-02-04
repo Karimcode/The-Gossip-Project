@@ -5,4 +5,6 @@
   <em>"<%= @gossip_nb.content %>"</em><br><br>
   written by <%=@author %><br>
   (rédigé le <%= @gossip_nb.created_at %>)
+  <br><br>
+  clique <%=link_to "ici", my_user_path(@user.id)%> pour découvrir l'auteur
 </p>

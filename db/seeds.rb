@@ -19,7 +19,7 @@ end
 puts "10 cities créées"
 
 10.times do
-	user = User.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, description: Faker::Lovecraft.paragraphs, email: Faker::Internet.free_email, age: Faker::Number.number(2), city_id: rand(City.all.first.id..City.all.last.id))
+	user = User.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, description: Faker::GameOfThrones.quote, email: Faker::Internet.free_email, age: Faker::Number.number(2), city_id: rand(City.all.first.id..City.all.last.id))
 end
 
 puts "10 users créés"
