@@ -1,10 +1,16 @@
 <h1>Bonjour étranger</h1>
 <p>Voici la liste des potins :</p>
-<% Gossip.all.each do |gossip|%>
+
+<% Gossip.all.each do |potin|%>
   <p>
-    Mon Titre:
-    <%= gossip.title%></br>
-    Mon auteur:
-    <%= User.find_by(id: gossip.user_id).first_name%>
+    Le titre du potin :
+    <%= potin.title%></br>
+    Son auteur:
+    <%= User.find_by(id: potin.user_id).first_name%> </br>
+=begin
+PROBLEME DE PATH
+    <%=link_to "Voir plus", gossips_path(@gossip.id)%>
+#FIN PROBLEME
+=end
   </p>
 <%end%>

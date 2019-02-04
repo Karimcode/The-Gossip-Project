@@ -1,0 +1,8 @@
+<h2>Voici le gossip <%=params[:gossip_id]%></h2><br>
+
+<p>
+  <strong><%= @gossip_nb.title %></strong><br>
+  <em>"<%= @gossip_nb.content %>"</em><br><br>
+  written by <%=@author %><br>
+  (rédigé le <%= @gossip_nb.created_at %>)
+</p>
