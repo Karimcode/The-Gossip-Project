@@ -1,2 +1,10 @@
 <h1>Bonjour étranger</h1>
 <p>Voici la liste des potins :</p>
+<% Gossip.all.each do |gossip|%>
+  <p>
+    Mon Titre:
+    <%= gossip.title%></br>
+    Mon auteur:
+    <%= User.find_by(id: gossip.user_id).first_name%>
+  </p>
+<%end%>

@@ -9,7 +9,7 @@
 User.destroy_all
 Tag.destroy_all
 Gossip.destroy_all
-LinksTag.destroy_all
+LinkTag.destroy_all
 City.destroy_all
 
 10.times do
@@ -37,11 +37,13 @@ end
 puts "10 tags créés"
 
 25.times do
-  links_tag = LinksTag.create!(tag_id: rand(Tag.all.first.id..Tag.all.last.id), gossip_id: rand(Gossip.all.first.id..Gossip.all.last.id))
+  links_tag = LinkTag.create!(tag_id: rand(Tag.all.first.id..Tag.all.last.id), gossip_id: rand(Gossip.all.first.id..Gossip.all.last.id))
 end
 
 puts "25 liens tags/gossips créés"
 
-2.times do 
+10.times do 
   private_message = PrivateMessage.create!(content: Faker::FamousLastWords.last_words, sender_id: rand(User.all.first.id..User.all.last.id), recipient_id: rand(User.all.first.id..User.all.last.id))
 end
+
+puts "10 pm envoyés"
