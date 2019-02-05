@@ -1,11 +1,12 @@
 # The Gossip Project - RoR - Day_01
 
-*Projet réalisé en pair programming par Jimmy (@Hykios42) et Emma (@emcalvet) dans le sang et la sueur*
-
 **Par : [Emma Calvet](https://github.com/emcalvet) / [Jimmy Charpagne](https://github.com/Hykios42/)**
  ***Apprentis mages noirs from Montpellier***
 ![](https://media.giphy.com/media/l46CsTPetihC1rX9K/giphy.gif)
 **Pour utiliser notre programme :**
+
+
+
 
  **1. CLONE
 	 2. bundle install
