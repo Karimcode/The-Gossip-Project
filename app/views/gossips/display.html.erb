@@ -2,6 +2,7 @@
   <h2>Voici le gossip n°<%=params[:gossip_id]%></h2><br>
 </div>
 
+
 <div class="card mx-3">
   <div class="card-header">
   <strong><%= @gossip_nb.title %></strong>
@@ -10,7 +11,7 @@
     <blockquote class="blockquote mb-0">
       <em>"<%= @gossip_nb.content %></em>
       <footer class="blockquote-footer">rédigé le <%= @gossip_nb.created_at %>
-        <p>clique <a href="<%=my_user_path(@user.id)%>" class="card-link">ici</a> pour découvrir son auteur</p>
+        <p>clique <a href="<%=my_user_path(@gossip_nb.user_id)%>" class="card-link">ici</a> pour découvrir son auteur</p>
       </footer>
     </blockquote>
   </div>
