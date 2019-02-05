@@ -1,6 +1,14 @@
-<h1>Tout savoir sur ton auteur préféré : <%= @user.first_name%>  <%= @user.last_name%></h1>
-<p>
-  Âge : <%=@user.age%><br>
-  Description : <%=@user.description%><br>
-  Lieu de résidence : <%=@city%> <br>
-</p>
+<div class="col text-center">
+  <h2>Tout savoir sur ton auteur préféré : <%= @user.first_name%>  <%= @user.last_name%></h2><br>
+</div>
+
+<div class="card mx-3">
+  <div class="card-header">
+    <strong>À savoir :</strong>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Âge : <%=@user.age%></li>
+    <li class="list-group-item">Description : <%=@user.description%></li>
+    <li class="list-group-item">Lieu de résidence : <%=@city%> </li>
+  </ul>
+</div>
