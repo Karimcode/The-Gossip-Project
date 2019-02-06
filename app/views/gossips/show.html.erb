@@ -2,16 +2,17 @@
   <h2>Voici le gossip n°<%=@gossip.id%></h2><br>
 </div>
 
-
 <div class="card mx-3">
   <div class="card-header">
   <strong><%= @gossip.title %></strong>
   </div>
   <div class="card-body">
     <blockquote class="blockquote mb-0">
-      <em>"<%= @gossip.content %></em>
+      <em>"<%= @gossip.content %></em><p></p>
       <footer class="blockquote-footer">rédigé le <%= @gossip.created_at %>
-        <p>clique <a href="<%=user_path(@gossip.user_id)%>" class="card-link">ici</a> pour découvrir son auteur</p>
+        <p></p>
+        <p>Par : <%= User.find(@gossip.user_id).first_name%> <%= User.find(@gossip.user_id).last_name   %> </p>
+        <p>clique <a href="<%=user_path(@gossip.user_id)%>" class="card-link">ici</a> pour en découvrir plus sur <strong><%= User.find(@gossip.user_id).first_name %></strong></p>
       </footer>
     </blockquote>
   </div>

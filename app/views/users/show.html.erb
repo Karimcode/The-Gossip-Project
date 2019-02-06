@@ -9,6 +9,7 @@
   <ul class="list-group list-group-flush">
     <li class="list-group-item">Âge : <%=@user.age%></li>
     <li class="list-group-item">Description : <%=@user.description%></li>
-    <li class="list-group-item">Lieu de résidence : <%=@city%> </li>
+    <li class="list-group-item">Lieu de résidence : <%=City.find(@user.city_id).name%> </li>
+    <li class="list-group-item">E-mail : <%= @user.email%> </li>
   </ul>
 </div>
