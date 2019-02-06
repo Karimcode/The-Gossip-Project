@@ -25,7 +25,7 @@ end
 puts "10 users créés"
 
 20.times do
-  gossip = Gossip.create!(title: Faker::Color.color_name, content: Faker::HarryPotter.quote, user_id: rand(User.all.first.id..User.all.last.id))
+  gossip = Gossip.create!(title: Faker::Color.color_name, content: Faker::HarryPotter.quote, user_id: rand(User.all.first.id..User.all.last.id),city_id: rand(City.all.first.id..City.all.last.id))
 end
 
 puts "20 gossips créés"
