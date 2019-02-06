@@ -1,4 +1,4 @@
-
+cc c emma
 # The Gossip Project - RoR - Day_01
 
   **Par : [Emma Calvet](https://github.com/emcalvet) / [Jimmy Charpagne](https://github.com/Hykios42/)**

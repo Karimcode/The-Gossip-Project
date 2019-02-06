@@ -18,11 +18,11 @@ class GossipsController < ApplicationController
       # pour info, le contenu de ce formulaire sera accessible dans le hash params (ton meilleur pote)
       # Une fois la création faite, on redirige généralement vers la méthode show (pour afficher le potin créé)
  
-      @gossip = Gossip.new(gossip_params)
+      @gossip = Gossip.new('title' => params[:title], 'content' => params[:content])
       if @gossip.save
-        redirect_to @gossip
+        redirect_to home_path
       else
-        render :new
+        render 'gossips/new'
       end
   end
   
