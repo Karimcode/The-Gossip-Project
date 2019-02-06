@@ -9,5 +9,8 @@ Rails.application.routes.draw do
   get '/team', to: 'team#display'
 
   resources  :gossips
-  resources  :users
+
+  resources  :user do
+    resources   :city, only: [:show]
+  end
 end
