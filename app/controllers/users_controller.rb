@@ -20,22 +20,24 @@ end
 
 def new
   # Méthode qui crée un potin vide et l'envoie une view qui affiche le formulaire pour 'le remplir' (new.html.erb)
-  @user = User.new(gossip_params)
-    if @user.save
-      redirect_to @user
-    else
-      render :new
-    end
+  @user = User.new
 end
 
 def create
   # Méthode qui créé un potin à partir du contenu du formulaire de new.html.erb, soumis par l'utilisateur
   # pour info, le contenu de ce formulaire sera accessible dans le hash params (ton meilleur pote)
   # Une fois la création faite, on redirige généralement vers la méthode show (pour afficher le potin créé)
+  @user = User.new(gossip_params)
+  if @user.save
+    redirect_to @user
+  else
+    render :new
+  end
 end
 
 def edit
   # Méthode qui récupère le potin concerné et l'envoie à la view edit (edit.html.erb) pour affichage dans un formulaire d'édition
+  @user = user.find(params[:id])
 end
 
 def update
