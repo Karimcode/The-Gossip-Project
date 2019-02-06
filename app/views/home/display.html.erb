@@ -1,27 +1,38 @@
-<div class="col text-center">
-  <h1>Bonjour moussaillon</h1><br>
-</div>
-
 <div class="container">
   <div class="row">
-    <div class="col-10">
-      <p>💁 Voici la liste des potins :</p>
+    <div class="col text-center">
+      <h1>Bonjour moussaillon</h1><br>
     </div>
+  </div>
 
-    <% Gossip.all.each do |potin|%>
-    <!-- <%@gossip = potin %>  pour emma : Hotfix à 5h du mat -->
-      <div class="col">
-        <div class="card mb-3" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title"><%= potin.title%></h5>
-            <h6 class="card-subtitle mb-2 text-muted">by <%= User.find_by(id: potin.user_id).first_name%> </h6>
-            <p class="card-text"><%= @gossip.content %></p> 
-              <div class="col text-center">
-                <a href="<%= gossip_path(@gossip.id)%>" class="btn btn-success">Voir plus</a>
-              </div>
+  <div class="row">
+    <div class="col text-center">
+      <a href="<%= new_gossip_path%>" class="btn btn-success">Ajoute un gossip !</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-10">
+        <p>💁 Voici la liste des potins :</p>
+      </div>
+
+      <% Gossip.all.each do |potin|%>
+      <!-- <%@gossip = potin %>  pour emma : Hotfix à 5h du mat -->
+        <div class="col">
+          <div class="card mb-3" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title"><%= potin.title%></h5>
+              <h6 class="card-subtitle mb-2 text-muted">by <%= User.find_by(id: potin.user_id).first_name%> </h6>
+              <p class="card-text"><%= @gossip.content %></p> 
+                <div class="col text-center">
+                  <a href="<%= gossip_path(@gossip.id)%>" class="btn btn-success">Voir plus</a>
+                </div>
+            </div>
           </div>
         </div>
-      </div>
-    <%end%>
+      <%end%>
+    </div>
   </div>
+</div>
 </div>
