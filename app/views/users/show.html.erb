@@ -11,5 +11,8 @@
     <li class="list-group-item">Description : <%=@user.description%></li>
     <li class="list-group-item">Lieu de résidence : <%=City.find(@user.city_id).name%> </li>
     <li class="list-group-item">E-mail : <%= @user.email%> </li>
+    <li class="list-group-item"><p>clique <a href="<%= city_path%>" class="card-link">ici</a> pour découvrir la ville de user-name </strong></p> </li>
+
+
   </ul>
 </div>

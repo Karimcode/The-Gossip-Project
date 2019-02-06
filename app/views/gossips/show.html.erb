@@ -13,6 +13,7 @@
         <p></p>
         <p>Par : <%= User.find(@gossip.user_id).first_name%> <%= User.find(@gossip.user_id).last_name   %> </p>
         <p>clique <a href="<%=user_path(@gossip.user_id)%>" class="card-link">ici</a> pour en découvrir plus sur <strong><%= User.find(@gossip.user_id).first_name %></strong></p>
+        <p>Et clique <a href="<%=city_path(@gossip.city_id)%>" class="card-link">la</a> pour voir tout les gossips de <%City.find(@gossip.city_id)%> </p>
       </footer>
     </blockquote>
   </div>
