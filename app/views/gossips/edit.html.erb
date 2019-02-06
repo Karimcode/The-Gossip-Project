@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-10">
+    <h2>Modifie ton dernier potin</h2>
+      <%= form_tag url_for(action: 'update'), method: "post" do %>
+        <form method="post" action="/update_gossip/<%= gossip['id'] %>">
+
+        <label for="title"> Title</label>
+        <input id="title" name="title" type="text" value="<%= post['title'] %>"/>
+        <br /> <br />
+  
+        <label for="body"> Body</label>
+        <textarea id="body" name="body"><%= post['body'] %></textarea>
+        <br /> <br />
+  
+        <label for="author"> Author</label>
+        <input id="author" name="author" type="text" value="<%= post['author'] %>"/>
+        <br /> <br />
+  
+        <input type="submit" value="Update Post" />
+  
+      </form>
+  
+      <br />
+      <a href="/list_posts">Back to Posts</a>
+    </div>
+  </div>
+</div>
