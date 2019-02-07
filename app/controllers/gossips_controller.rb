@@ -1,6 +1,5 @@
 class GossipsController < ApplicationController
   before_action :authenticate_user, only: [:new]
-  before_action :verify_user, only: [:edit, :update, :destroy]
 
   def index
     @gossips = Gossip.all
@@ -54,6 +53,9 @@ class GossipsController < ApplicationController
   def destroy
       # Méthode qui récupère le potin concerné et le détruit en base
       # Une fois la suppression faite, on redirige généralement vers la méthode index (pour afficher la liste à jour)
+      @gossip = Gossip.find(params[:id])
+      @gossip.destroy
+      redirect_to gossips_path
       
   end
 
@@ -65,12 +67,4 @@ class GossipsController < ApplicationController
       redirect_to new_session_path
     end
   end
-
-  def verify_user
-    unless current_user.id == @gossip.user_id
-      flash[:danger] = "Not yours, Please log in."
-      redirect_to new_session_path
-    end
-  end
-
 end
