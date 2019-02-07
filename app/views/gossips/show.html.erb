@@ -15,8 +15,10 @@
           <p>Par : <a href="<%=user_path(@gossip.user_id)%>" class="card-link"><%= User.find(@gossip.user_id).first_name%> <%= User.find(@gossip.user_id).last_name %></a></p>
           <!-- <p>clique <a href="<%=user_path(@gossip.user_id)%>" class="card-link">ici</a> pour en découvrir plus sur <strong><%= User.find(@gossip.user_id).first_name %></strong></p> -->
           <p>Clique <a href="<%=city_path(@gossip.city_id)%>" class="card-link">ici</a> pour voir tout les gossips de <%=City.find(@gossip.city_id).name%>.</p>
-          <p>Et clique <a href="<%=edit_gossip_path(@gossip.id)%>" class="card-link">là</a> pour modifier ce gossip.</p>
-
+          <%if current_user.id == @gossip.user_id%>
+              <a href="<%=edit_gossip_path(@gossip.id)%>" class="class="btn btn-info">Modifier</a>
+              <a href="<%=destroy_gossip_path(@gossip.id)%>" class="class="btn btn-info">Supprimer</a>
+          <%end%>
         </footer>
       </blockquote>
     </div>
