@@ -1,11 +1,10 @@
-cc c emma
-# The Gossip Project - RoR - Day_01
+# The Gossip Project - RoR - Day_04
 
-  **Par : [Emma Calvet](https://github.com/emcalvet) / [Jimmy Charpagne](https://github.com/Hykios42/)**
+  **Par : [Emma Calvet](https://github.com/emcalvet) / [Jimmy Charpagne](https://github.com/Hykios42/) / [Karel Cloarec](https://github.com/Karel2)**
 
-***Apprentis mages noirs from Montpellier***
+***Lisa, Bart & Ralph from Montpellier***
 
-![](https://media.giphy.com/media/l46CsTPetihC1rX9K/giphy.gif)
+![](https://media.giphy.com/media/avPzMKapzB8D6/giphy.gif)
 
 **Pour utiliser notre programme :**
 1. CLONE !!
@@ -24,13 +23,10 @@ cc c emma
 
 - Accéder à chaque auteur en cliquant sur le lien sur la page d'un de ses potins
 
-PS: le as: dans les routes = magie noire from MTP (& la bretagne ! Merci à @Florian_Even)
 
+=> Nous demain matin <==
 
-=> Jimmy demain après les réparation de nuit <==
-
-.
-![](https://media.giphy.com/media/xUA7bjoUNhwWVCfTR6/giphy.gif)
+![](https://media.giphy.com/media/3orif4nTHWbF6Du8i4/giphy.gif)
 
   
 
