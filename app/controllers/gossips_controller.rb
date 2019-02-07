@@ -1,4 +1,5 @@
 class GossipsController < ApplicationController
+  before_action :authenticate_user, only: [:new]
 
   def index
     @gossips = Gossip.all
@@ -53,4 +54,15 @@ class GossipsController < ApplicationController
       # Méthode qui récupère le potin concerné et le détruit en base
       # Une fois la suppression faite, on redirige généralement vers la méthode index (pour afficher la liste à jour)
   end
+
+  private
+
+  def authenticate_user
+    unless current_user
+      flash[:danger] = "Please log in."
+      redirect_to new_session_path
+    end
+  end
+
+
 end
