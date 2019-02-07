@@ -4,7 +4,7 @@
 
 ***Lisa, Bart & Ralph from Montpellier***
 
-![](https://giphy.com/gifs/the-simpsons-ralph-wiggum-flute-avPzMKapzB8D6)
+![]https://media.giphy.com/media/avPzMKapzB8D6/giphy.gif)
 
 **Pour utiliser notre programme :**
 1. CLONE !!
@@ -26,8 +26,7 @@
 
 => Nous demain matin <==
 
-.
-![](https://giphy.com/gifs/season-13-the-simpsons-13x12-3orif4nTHWbF6Du8i4)
+![](https://media.giphy.com/media/3orif4nTHWbF6Du8i4/giphy.gif)
 
   
 
