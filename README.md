@@ -7,7 +7,7 @@
 ![](https://giphy.com/gifs/the-simpsons-ralph-wiggum-flute-avPzMKapzB8D6)
 
 **Pour utiliser notre programme :**
-1. CLONE
+1. CLONE !!
 2. bundle install
 3. rails db:migrate
 4. rails db:seed

@@ -18,8 +18,10 @@ class GossipsController < ApplicationController
       # pour info, le contenu de ce formulaire sera accessible dans le hash params (ton meilleur pote)
       # Une fois la création faite, on redirige généralement vers la méthode show (pour afficher le potin créé)
  
-      @gossip = Gossip.new('user_id' => User.find_by(first_name: 'anonymous').id, 'title' => params[:title], 'content' => params[:content])
+      @gossip = Gossip.new('title' => params[:title], 'content' => params[:content], 'city_id' => rand(City.all.first.id..City.all.last.id))
+      @gossip.user = User.find_by(id: session[:user_id])
       if @gossip.save
+        flash[:success] = "Potin bien créé !"
         redirect_to root_path
       else
         render new_gossip_path
@@ -37,10 +39,12 @@ class GossipsController < ApplicationController
       # Une fois la modification faite, on redirige généralement vers la méthode show (pour afficher le potin modifié)
 
       @gossip = Gossip.find(params[:id])
-        if @gossip.update('user_id' => User.find_by(first_name: 'anonymous').id, 'title' => params[:title], 'content' => params[:content])
-          redirect_to root_path
+      @gossip.title = params[:title]
+      @gossip.content = params[:content]
+        if @gossip.update('title' => params[:gossip][:title], 'content' => params[:gossip][:content])
+          redirect_to @gossip
         else
-          render edit_gossip_path
+          render :edit 
         end
   end
   
