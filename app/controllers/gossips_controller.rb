@@ -19,7 +19,8 @@ class GossipsController < ApplicationController
       # Une fois la création faite, on redirige généralement vers la méthode show (pour afficher le potin créé)
  
       @gossip = Gossip.new('title' => params[:title], 'content' => params[:content], 'city_id' => rand(City.all.first.id..City.all.last.id))
-      @gossip.user = User.find_by(id: session[:user_id])
+      @gossip.user = current_user
+
       if @gossip.save
         flash[:success] = "Potin bien créé !"
         redirect_to root_path
