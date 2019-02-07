@@ -8,7 +8,7 @@ cc c emma
 ![](https://media.giphy.com/media/l46CsTPetihC1rX9K/giphy.gif)
 
 **Pour utiliser notre programme :**
-1. CLONE
+1. CLONE !
 2. bundle install
 3. rails db:migrate
 4. rails db:seed
