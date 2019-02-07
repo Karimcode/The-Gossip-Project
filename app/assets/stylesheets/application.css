@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+ x.row {
+   border: 1px dotted blue
+ }
+ 

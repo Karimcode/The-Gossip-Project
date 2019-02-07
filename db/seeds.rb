@@ -22,11 +22,11 @@ puts "10 cities créées"
 	user = User.create!(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, description: Faker::Lorem.paragraph_by_chars(140, false), email: Faker::Internet.free_email, age: Faker::Number.number(2), city_id: rand(City.all.first.id..City.all.last.id))
 end
 
-anon = User.create!(first_name: 'anonymous', last_name: 'none', description: 'this is empty', email: 'anon@nomail.com', age: 12, city_id: rand(City.all.first.id..City.all.last.id))
+anon = User.create!(first_name: 'anonymous', last_name: 'none', description: 'this is empty', email: 'anon@nomail.com', age: Faker::Number.number(2), city_id: rand(City.all.first.id..City.all.last.id))
 
 puts "10 users créés & 1 anon"
 
-20.times do
+21.times do
   gossip = Gossip.create!(title: Faker::Color.color_name, content: Faker::HarryPotter.quote, user_id: rand(User.all.first.id..User.all.last.id),city_id: rand(City.all.first.id..City.all.last.id))
 end
 
