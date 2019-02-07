@@ -27,7 +27,8 @@ def create
   # Méthode qui créé un potin à partir du contenu du formulaire de new.html.erb, soumis par l'utilisateur
   # pour info, le contenu de ce formulaire sera accessible dans le hash params (ton meilleur pote)
   # Une fois la création faite, on redirige généralement vers la méthode show (pour afficher le potin créé)
-  @user = User.new(gossip_params)
+  
+  @user = User.new('first_name' => params[:first_name], 'last_name' => params[:last_name], 'email' => params[:email], 'password' => params[:password], 'city_id' => rand(City.all.first.id..City.all.last.id), 'description' => params[:description], 'age' => params[:age])
   if @user.save
     redirect_to @user
   else
