@@ -1,6 +1,6 @@
 <div class="container">
 <div class="form-group row">
-    <div class="col-10">
+  <div class="col-10">
     <h2>Modifie ton dernier potin</h2><br>
 
     <%= form_for @gossip do |f| %>
@@ -15,6 +15,17 @@
     
       <%= f.submit "Submit Article", class: 'btn btn-success' %>
     <% end %>
+    <% if @gossip.errors.any? %>
+      <div class="alert alert-warning mt-2" role="alert">
+        <p>Nous navons pas réussi à créer le potin pour la (ou les) raison(s) suivante(s) :</p>
+          <ul>
+          <% @gossip.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+          <p>Merci de réessayer</p>
+          <% end %>
+      </div>
     </div>
   </div>
 </div>
