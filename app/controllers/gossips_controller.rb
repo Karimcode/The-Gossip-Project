@@ -38,9 +38,9 @@ class GossipsController < ApplicationController
 
       @gossip = Gossip.find(params[:id])
         if @gossip.update('user_id' => User.find_by(first_name: 'anonymous').id, 'title' => params[:title], 'content' => params[:content])
-          redirect_to root_path
+          redirect_to @gossip
         else
-          render edit_gossip_path
+          render :edit
         end
   end
   
