@@ -1,30 +1,33 @@
 <div class="container">
-<div class="form-group row">
-  <div class="col-10">
-    <h2>Modifie ton dernier potin</h2><br>
+  <div class="form-group row">
+    <div class="col-10">
 
-    <%= form_for @gossip do |f| %>
+      <h2>Modifie ton dernier potin</h2><br>
 
-      <p>Auteur: <%= User.find(@gossip.user_id).first_name%></p><br>
+      <%= form_for @gossip do |f| %>
+
+        <p>Auteur: <%= User.find(@gossip.user_id).first_name%></p><br>
+        
+        <%= f.label 'Le Titre' %><br>
+        <%= f.text_field :title, class: 'form-control' %><br><br />
       
-      <%= f.label 'Le Titre' %><br>
-      <%= f.text_field :title, class: 'form-control' %><br><br />
-    
-      <%= f.label 'Le Contenu' %><br>
-      <%= f.text_area :content, class: 'form-control'  %><br><br />
-    
-      <%= f.submit "Submit Article", class: 'btn btn-success' %>
-    <% end %>
-    <% if @gossip.errors.any? %>
-      <div class="alert alert-warning mt-2" role="alert">
-        <p>Nous navons pas réussi à créer le potin pour la (ou les) raison(s) suivante(s) :</p>
+        <%= f.label 'Le Contenu' %><br>
+        <%= f.text_area :content, class: 'form-control'  %><br><br />
+      
+        <%= f.submit "Submit Article", class: 'btn btn-success' %>
+      <% end %>
+
+      <!-- affiche les erreurs qui empêchent la modification du potin -->
+      <% if @gossip.errors.any? %>
+        <div class="alert alert-warning mt-2" role="alert">
+          <p>Nous navons pas réussi à créer le potin pour la (ou les) raison(s) suivante(s) :</p>
           <ul>
-          <% @gossip.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
+            <% @gossip.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
           </ul>
           <p>Merci de réessayer</p>
-          <% end %>
+        <% end %>
       </div>
     </div>
   </div>
