@@ -1,5 +1,7 @@
 # The Gossip Project - RoR - Day_04
 
+
+Pour tester notre applications : 
 **https://the-gossip-project-mtp.herokuapp.com**
 
   **Par : [Emma Calvet](https://github.com/emcalvet) / [Jimmy Charpagne](https://github.com/Hykios42/) / [Karel Cloarec](https://github.com/Karel2)**
@@ -7,6 +9,8 @@
 ***Lisa, Bart & Ralph from Montpellier***
 
 ![](https://media.giphy.com/media/avPzMKapzB8D6/giphy.gif)
+
+**Pour les tryharder du test en local OU si ça marche pas !**
 
 **Pour utiliser notre programme :**
 1. CLONE !!
