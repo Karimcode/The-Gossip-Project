@@ -10,7 +10,7 @@ Pour tester notre applications :
 
 ![](https://media.giphy.com/media/avPzMKapzB8D6/giphy.gif)
 
-**Pour les tryharder du test en local OU si ça marche pas !**
+**Pour les tryharder du test en local OU si Heroku marche pas genre ":insert rand(heroku.erreur_des_enfers)" !**
 
 **Pour utiliser notre programme :**
 1. CLONE !!
