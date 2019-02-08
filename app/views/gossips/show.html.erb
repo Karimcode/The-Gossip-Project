@@ -16,7 +16,8 @@
           <!-- <p>clique <a href="<%=user_path(@gossip.user_id)%>" class="card-link">ici</a> pour en découvrir plus sur <strong><%= User.find(@gossip.user_id).first_name %></strong></p> -->
           <p>Clique <a href="<%=city_path(@gossip.city_id)%>" class="card-link">ici</a> pour voir tout les gossips de <%=City.find(@gossip.city_id).name%>.</p>
           <%if current_user.id == @gossip.user_id%>
-              <a href="<%=edit_gossip_path(@gossip.id)%>" class="class="btn btn-info">Modifier</a>
+            <%puts @gossip%>
+              <a href="<%=edit_gossip_path(params[:id])%>" class="class="btn btn-info">Modifier</a>
               <%= form_tag url_for(action: 'destroy'), method: "delete" do%>
                 <%= submit_tag "Supprimer", class: 'btn btn-danger'%>
               <%end%>
