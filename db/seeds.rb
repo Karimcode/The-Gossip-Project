@@ -34,6 +34,10 @@ puts "20 gossips créés"
   tag = Tag.create!(title: Faker::Lorem.word)
 end
 
+puts "20 comments crées"
+20.times do Comment.create!(content: Faker::Hacker.say_something_smart, user_id: rand(User.all.first.id..User.all.last.id), gossip_id: rand(Gossip.all.first.id..Gossip.all.last.id), like: Faker::Number.between(1, 30))
+end
+
 puts "10 tags créés"
 
 25.times do
