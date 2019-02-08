@@ -8,19 +8,22 @@
   <div class="container">
     <div class="row">
       <div class="col-10">
-        <p>💁 Voici la liste des potins de <%=@city.name%> :</p>
+        <p>💁 Voici la liste des potins de cette ville :</p>
       </div>
-    <% Gossip.all.each do |potin|%>
-      <%if potin.city_id == @city.id%>
+    </div>
+  
+    <div class="row">
+      <% Gossip.all.each do |potin|%>
+        <%if potin.city_id == @city.id%>
   
           <div class="col">
-            <div class="card mb-3" style="width: 18rem;">
+            <div class="card mb-4" style="width: 17rem; height: 12rem;">
               <div class="card-body">
-                <h5 class="card-title"><%= potin.title%></h5>
+                <h5 class="card-title"><%= potin.title.capitalize!%></h5>
                 <h6 class="card-subtitle mb-2 text-muted">by <%= User.find_by(id: potin.user_id).first_name%> </h6>
-                <p class="card-text"><%= potin.content %></p> 
+                <p class="card-text"><%= potin.content[0..50] %>...</p> 
                   <div class="col text-center">
-                    <a href="<%= gossip_path(potin.id)%>" class="btn btn-success">Voir plus</a>
+                    <a href="<%= gossip_path(potin.id)%>" class="btn btn-info">Voir plus</a>
                   </div>
               </div>
             </div>

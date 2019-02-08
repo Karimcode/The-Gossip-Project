@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TheGossipProject</title>
+    <title>The Gossip Project</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.thehackingproject.org/assets/favicon/favicon-16x16-d96ba65e5785d32474df9ebc6fbfd5442c751d527b10981a474bc3b7a4079d01.png">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -15,14 +18,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-
-    <title>Notre site en ligne !</title>
-
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="<%=root_path%>">The Gossip Project</a>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand px-4" href="<%=root_path%>">The Gossip Project</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -51,7 +52,7 @@
       </div>
     </nav>
 
-  <div class="pt-3">
+    <section class="pt-3 mb-4">
     
       <%= yield %>
 
@@ -60,6 +61,14 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    </section>
+
+    <footer class="footer">
+      <div class="container text-center py-2">
+        <p class="text-muted small">Ce site de potins vous est proposé par la Team Montpellier ☀</p>
       </div>
+    </footer>
+
   </body>
 </html>

@@ -1,12 +1,16 @@
 <div class="container">
   <div class="row">
-    <div class="col text-center">
-      <h1>Bonjour moussaillon</h1><br>
+    <div class="col text-center pt-3">
+      <%if current_user%>
+        <h1>Bonjour <%=current_user.first_name%> !</h1><br>
+      <%else%>
+        <h1>Bonjour moussaillon</h1><br>
+      <%end%>
     </div>
   </div>
 
   <div class="row">
-    <div class="col text-center">
+    <div class="col text-center pb-2">
       <a href="<%= new_gossip_path%>" class="btn btn-success">Ajoute un gossip !</a>
     </div>
   </div>
@@ -22,7 +26,7 @@
       <% Gossip.all.each do |potin|%>
         <%@gossip = potin %>
         <div class="col">
-          <div class="card mb-3" style="width: 17rem; height: 12rem;">
+          <div class="card mb-4" style="width: 17rem; height: 12rem;">
             <div class="card-body">
               <h5 class="card-title"><%= potin.title.capitalize!%></h5>
               <h6 class="card-subtitle mb-2 text-muted">by <%= User.find_by(id: potin.user_id).first_name%> </h6>

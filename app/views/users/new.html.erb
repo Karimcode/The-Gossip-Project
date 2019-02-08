@@ -1,7 +1,11 @@
 <div class="container">
   <div class="row">
-    <div class="col-10">
-    <h2>Bienvenue jeune padawan du gossip !</h2>
+
+    <div class="col text-center">
+      <h2>Bienvenue jeune padawan du gossip !</h2>
+    </div>
+
+    <div class="col-12">
         <div class="form-group">
           <%= form_tag url_for(action: 'create'), method: "post" do %>  
             <%= label_tag 'first_name' %>
@@ -28,6 +32,8 @@
             <%= submit_tag "Inscription !", class: 'btn btn-success' %>
           <% end %>
         </div>
+
+        <!-- affiche les erreurs qui empêchent la création du nouveau potin -->
         <% if @user.errors.any? %>
           <div class="alert alert-warning mt-2" role="alert">
             <p>Nous navons pas réussi à créer d'utilisateur pour la (ou les) raison(s) suivante(s) :</p>
@@ -39,6 +45,7 @@
               <p>Merci de réessayer</p>
         <% end %>
         </div>
+
     </div>
   </div>
 </div>
